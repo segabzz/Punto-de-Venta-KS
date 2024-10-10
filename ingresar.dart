@@ -47,22 +47,7 @@ class Ingresar extends StatelessWidget {
             onPressed: () {
               // Lógica para iniciar sesión
             },
-            child: Text('Iniciar Sesion'),
-            style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
-          ),
-          SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('No tienes una cuenta? Registrate ---->'),
-              TextButton(
-                onPressed: () {
-                  DefaultTabController.of(context).animateTo(1);
-                },
-                child: Text('Registrarse'),
-                style: TextButton.styleFrom(foregroundColor: Colors.green),
-              ),
-            ],
+            child: Text('Iniciar Sesión'),
           ),
         ],
       ),
@@ -75,35 +60,21 @@ class Ingresar extends StatelessWidget {
       child: Column(
         children: [
           TextField(
-            decoration: InputDecoration(labelText: 'Nombre del Usuario'),
+            decoration: InputDecoration(labelText: 'Nombre de Usuario'),
+          ),
+          TextField(
+            decoration: InputDecoration(labelText: 'Correo Electrónico'),
           ),
           TextField(
             decoration: InputDecoration(labelText: 'Contraseña'),
             obscureText: true,
           ),
-          TextField(
-            decoration: InputDecoration(labelText: 'E-Mail'),
-          ),
-          TextField(
-            decoration: InputDecoration(labelText: 'Telefono'),
-          ),
           SizedBox(height: 20),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              ElevatedButton(
-                onPressed: () {
-                  // Lógica para guardar
-                },
-                child: Text('Guardar'),
-              ),
-              ElevatedButton(
-                onPressed: () {
-                  // Lógica para salir
-                },
-                child: Text('Salir'),
-              ),
-            ],
+          ElevatedButton(
+            onPressed: () {
+              // Lógica para registrar
+            },
+            child: Text('Registrar'),
           ),
         ],
       ),
